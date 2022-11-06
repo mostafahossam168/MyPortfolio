@@ -194,12 +194,7 @@ header .container .header-content .img-user {
 }
 @media (max-width: 500px) {
   header .container .header-content form {
-    width: 200px;
-  }
-}
-@media (max-width: 400px) {
-  header .container .header-content form {
-    width: 150px;
+    display: none;
   }
 }
 /* =========================Sidbar===================== */
@@ -347,21 +342,16 @@ ul li a i {
 .home .home-content .text {
   padding: 15px;
 }
-.home .home-content .text h2 {
-  color: var(--text-black-900);
-  margin-bottom: 10px;
-}
-.home .home-content .text h2 span {
-  color: var(--main-color);
-  font-family: "Clicker Script", cursive;
-}
+.home .home-content .text h2,
 .home .home-content .text h3 {
   color: var(--text-black-900);
   margin-bottom: 10px;
 }
+.home .home-content .text h2 span,
 .home .home-content .text h3 span {
-  color: var(--main-color);
   font-family: "Clicker Script", cursive;
+  font-weight: 700;
+  color: var(--main-color);
 }
 .home .home-content .text p {
   color: var(--text-black-700);

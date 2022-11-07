@@ -9,13 +9,20 @@ addEventListener('scroll',()=>{
     }else{
         header.classList.remove('active')
     }
-})
+});
+//Opensidbar
 openSidar.addEventListener('click',()=>{
     sidbar.classList.add('active');
 })
+//Close sidbar
 closeSidbar.addEventListener('click',()=>{
     sidbar.classList.remove('active');
 })
+//Close Sidbar If Scroll
+addEventListener('scroll',()=>{
+    sidbar.classList.remove('active');
+})
+
 
 //Progress
 let yearlyBox=document.querySelector('.yearly-box');
@@ -77,3 +84,10 @@ modeSpan.addEventListener('click',()=>{
         document.body.classList.add('dark');
     }
 })
+
+//Add My Age
+let age=document.querySelector('.age');
+let mybirthday=new Date('16 Aug 2002');
+let dateNow=new Date();
+let myage=dateNow.getTime()- mybirthday.getTime();
+age.textContent=Math.floor(myage/1000/365/24/60/60);

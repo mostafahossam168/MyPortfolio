@@ -36,7 +36,6 @@ body {
   padding-left: 270px;
   height: 500vh;
   background-color: var(--bg-black-900);
-  /* background-color: #f1f5f9; */
 }
 /* Start Global Ruls  */
 .container {
@@ -87,16 +86,25 @@ section {
 .mood:hover {
   background-color: var(--main-color);
 }
+.btn,
+.btn-up {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: var(--main-color);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: var(--transtion);
+}
+.btn {
+  padding: 6px 15px;
+}
 .btn-up {
   position: fixed;
   bottom: 10px;
   right: -50px;
   padding: 9px;
-  background-color: var(--main-color);
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: var(--transtion);
 }
 .btn-up.active {
   right: 10px;
@@ -257,7 +265,7 @@ header .container .header-content .img-user {
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
-  font-size: 17px;
+  font-size: 16px;
   cursor: pointer;
   color: var(--text-black-900);
   transition: var(--transtion);
@@ -285,7 +293,7 @@ ul li a i {
   .sidbar {
     width: 62px;
     overflow: hidden;
-    padding: 150px 5px;
+    padding: 170px 5px;
   }
   .sidbar .logo {
     display: none;
@@ -318,9 +326,6 @@ ul li a i {
   }
   .sidbar .close-sidbar {
     display: inline-block;
-  }
-  .sidbar ul li a {
-    font-size: 16px;
   }
 }
 /* =========================Home Section=====================  */
@@ -395,8 +400,94 @@ ul li a i {
   .home .home-content .text,
   .home .home-content .img-home {
     width: 100%;
+    padding: 0;
   }
   .home .home-content .img-home {
     display: none;
+  }
+}
+/* =========================About Section===================== */
+.about {
+  /* background-color: var(--main-color); */
+}
+.title-section {
+  color: var(--text-black-900);
+  padding: 10px 10px 10px 0;
+  position: relative;
+  margin-bottom: 50px;
+  width: fit-content;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 600;
+}
+.title-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color);
+  width: 80px;
+  height: 3px;
+}
+.title-section::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--main-color);
+  width: 50px;
+  height: 3px;
+}
+.about .description h3 {
+  color: var(--text-black-900);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.about .description h3 span {
+  color: var(--main-color);
+}
+.about .description p {
+  padding-right: 15px;
+  line-height: 1.6;
+  color: var(--text-black-700);
+}
+.about .about-information {
+  display: flex;
+  margin: 25px 0;
+  gap: 20px;
+}
+.about .about-information .list {
+  width: 45%;
+}
+.about .about-information .list li {
+  border-bottom: 1px solid var(--text-black-700);
+  padding: 15px 0;
+}
+.about .about-information .list li span {
+  font-size: 15px;
+}
+.about .about-information .list li span.que {
+  color: var(--text-black-900);
+  font-weight: 600;
+}
+.about .about-information .list li span.ans {
+  color: var(--text-black-700);
+  padding-left: 4px;
+}
+.about .btns-about {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .about .about-information {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about .about-information .list {
+    width: 95%;
+  }
+  .about .about-information .list li {
+    padding: 12px 0;
   }
 }

@@ -1,38 +1,7 @@
-//Toggle Mode
-let modeSpan=document.querySelector('.mood');
-let iconTogg=document.querySelector('.mood i')
-let mood;
-if(localStorage.getItem('mood')!=null){
-    if(localStorage.getItem('mood')=='dark'){
-        iconTogg.classList.replace('fa-sun','fa-moon')
-        document.body.classList.add('dark');
-    }else{
-        iconTogg.classList.replace('fa-moon','fa-sun')
-        document.body.classList.remove('dark');
-    }
-}
-
-modeSpan.addEventListener('click',()=>{
-    if(mood=='dark'){
-        iconTogg.classList.replace('fa-sun','fa-moon')
-        mood='light';
-        localStorage.setItem('mood','light');
-        document.body.classList.remove('dark');
-    }else{
-        iconTogg.classList.replace('fa-moon','fa-sun')
-        mood='dark'
-        localStorage.setItem('mood','dark');
-        document.body.classList.add('dark');
-    }
-})
-
-
-
 let header=document.querySelector('header')
 let sidbar=document.querySelector('.sidbar');
 let closeSidbar=document.querySelector('.close-sidbar');
 let openSidar=document.querySelector('.open-sidbar');
-
 addEventListener('scroll',()=>{
     if(scrollY>50){
         header.classList.add('active')
@@ -52,6 +21,36 @@ closeSidbar.addEventListener('click',()=>{
 addEventListener('scroll',()=>{
     sidbar.classList.remove('active');
 })
+
+//Toggle Mode
+let modeSpan=document.querySelector('.mood');
+let iconTogg=document.querySelector('.mood i')
+let mood;
+if(localStorage.getItem('mood')!=null){
+    if(localStorage.getItem('mood')=='dark'){
+        iconTogg.classList.replace('fa-sun','fa-moon')
+        document.body.classList.add('dark');
+    }else{
+        iconTogg.classList.replace('fa-moon','fa-sun')
+        document.body.classList.remove('dark');
+    }
+}
+modeSpan.addEventListener('click',()=>{
+    if(mood=='dark'){
+        iconTogg.classList.replace('fa-sun','fa-moon')
+        mood='light';
+        localStorage.setItem('mood','light');
+        document.body.classList.remove('dark');
+    }else{
+        iconTogg.classList.replace('fa-moon','fa-sun')
+        mood='dark'
+        localStorage.setItem('mood','dark');
+        document.body.classList.add('dark');
+    }
+})
+
+
+
 
 
 //Progress
@@ -86,6 +85,12 @@ if(document.body.classList.contains('dashboard')){
         }
     })
 }
+//Add My Age
+let age=document.querySelector('.age');
+let mybirthday=new Date('16 Aug 2002');
+let dateNow=new Date();
+let myage=dateNow.getTime()- mybirthday.getTime();
+age.textContent=Math.floor(myage/1000/365/24/60/60);
 
 //Button Up
 let upBtn=document.querySelector('.btn-up');
@@ -99,12 +104,3 @@ addEventListener('scroll',()=>{
 upBtn.addEventListener('click',()=>{
     window.scrollTo(0,0)
 })
-
-
-
-//Add My Age
-let age=document.querySelector('.age');
-let mybirthday=new Date('16 Aug 2002');
-let dateNow=new Date();
-let myage=dateNow.getTime()- mybirthday.getTime();
-age.textContent=Math.floor(myage/1000/365/24/60/60);

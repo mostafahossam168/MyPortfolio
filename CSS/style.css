@@ -70,7 +70,7 @@ body {
   border-radius: 5px;
 }
 section {
-  padding: 15px;
+  padding: 30px 15px;
 }
 .mood {
   position: fixed;
@@ -438,6 +438,9 @@ ul li a i {
   width: 50px;
   height: 3px;
 }
+.about .about-content {
+  padding: 15px;
+}
 .about .description h3 {
   color: var(--text-black-900);
   font-size: 22px;
@@ -454,7 +457,7 @@ ul li a i {
 .about .about-information {
   display: flex;
   margin: 25px 0;
-  gap: 20px;
+  gap: 40px;
 }
 .about .about-information .list {
   width: 45%;

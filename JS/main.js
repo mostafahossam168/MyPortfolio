@@ -1,3 +1,33 @@
+//Toggle Mode
+let modeSpan=document.querySelector('.mood');
+let iconTogg=document.querySelector('.mood i')
+let mood;
+if(localStorage.getItem('mood')!=null){
+    if(localStorage.getItem('mood')=='dark'){
+        iconTogg.classList.replace('fa-sun','fa-moon')
+        document.body.classList.add('dark');
+    }else{
+        iconTogg.classList.replace('fa-moon','fa-sun')
+        document.body.classList.remove('dark');
+    }
+}
+
+modeSpan.addEventListener('click',()=>{
+    if(mood=='dark'){
+        iconTogg.classList.replace('fa-sun','fa-moon')
+        mood='light';
+        localStorage.setItem('mood','light');
+        document.body.classList.remove('dark');
+    }else{
+        iconTogg.classList.replace('fa-moon','fa-sun')
+        mood='dark'
+        localStorage.setItem('mood','dark');
+        document.body.classList.add('dark');
+    }
+})
+
+
+
 let header=document.querySelector('header')
 let sidbar=document.querySelector('.sidbar');
 let closeSidbar=document.querySelector('.close-sidbar');
@@ -70,20 +100,7 @@ upBtn.addEventListener('click',()=>{
     window.scrollTo(0,0)
 })
 
-//Toggle Mode
-let mood='dark';
-let modeSpan=document.querySelector('.mood');
-modeSpan.addEventListener('click',()=>{
-    if(mood=='dark'){
-        modeSpan.querySelector('i').classList.replace('fa-sun','fa-moon')
-        mood='light';
-        document.body.classList.remove('dark');
-    }else{
-        modeSpan.querySelector('i').classList.replace('fa-moon','fa-sun')
-        mood='dark'
-        document.body.classList.add('dark');
-    }
-})
+
 
 //Add My Age
 let age=document.querySelector('.age');

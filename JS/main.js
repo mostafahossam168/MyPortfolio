@@ -1,14 +1,6 @@
-let header=document.querySelector('header')
-let sidbar=document.querySelector('.sidbar');
+let sidbar=document.querySelector('.sidbar')
 let closeSidbar=document.querySelector('.close-sidbar');
 let openSidar=document.querySelector('.open-sidbar');
-addEventListener('scroll',()=>{
-    if(scrollY>50){
-        header.classList.add('active')
-    }else{
-        header.classList.remove('active')
-    }
-});
 //Opensidbar
 openSidar.addEventListener('click',()=>{
     sidbar.classList.add('active');
@@ -66,33 +58,29 @@ addEventListener('scroll',()=>{
         })
     }
 })
-
-
-//Counter Number
-let ticketBox=document.querySelector('.tickets-box');
-let allNumber=document.querySelectorAll('.item-ticket > h3');
-function count(number){
-    let interval=setInterval(()=>{
-        if(number.textContent==number.getAttribute('data-number')){
-            clearInterval(interval);
-        }else{
-            number.textContent++;
-        }
-    },2000/number.getAttribute('data-number'))
-}
-if(document.body.classList.contains('dashboard')){
-    addEventListener('scroll',()=>{
-        if(scrollY>=ticketBox.offsetTop-350){
-            allNumber.forEach(num=>{count(num)})
-        }
-    })
-}
 //Add My Age
 let age=document.querySelector('.age');
 let mybirthday=new Date('16 Aug 2002');
 let dateNow=new Date();
 let myage=dateNow.getTime()- mybirthday.getTime();
 age.textContent=Math.floor(myage/1000/365/24/60/60);
+
+//Filter My Projects
+let listProjects=document.querySelectorAll('.list-portfolio li');
+listProjects.forEach((li)=>{
+    li.addEventListener('click',()=>{
+        listProjects.forEach((e)=>e.classList.remove('active'));
+        li.classList.add('active');
+    })
+})
+
+
+
+
+
+
+
+
 
 //Button Up
 let upBtn=document.querySelector('.btn-up');

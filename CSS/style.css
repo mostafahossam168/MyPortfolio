@@ -54,6 +54,7 @@ section {
 .mood,
 .open-sidbar {
   position: fixed;
+  z-index: 5;
   background-color: var(--bg-white);
   color: var(--text-black-700);
   padding: 5px 10px;
@@ -473,5 +474,30 @@ ul li a i {
   }
   .skills .skills-content .box-skill h4 {
     font-size: 15px;
+  }
+}
+/* =========================Portfolio Section=====================  */
+.portfolio .list-portfolio {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.portfolio .list-portfolio li {
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: var(--text-black-900);
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  transform: var(--transtion);
+}
+.portfolio .list-portfolio li:hover,
+.portfolio .list-portfolio li.active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+@media {
+  .portfolio .list-portfolio li {
+    padding: 7px 10px;
+    font-size: 14px;
   }
 }

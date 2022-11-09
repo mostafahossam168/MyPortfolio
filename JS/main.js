@@ -23,28 +23,31 @@ addEventListener('scroll',()=>{
 })
 
 //Toggle Mode
-let modeSpan=document.querySelector('.mood');
+let modeSpan=document.getElementById('mood');
 let iconTogg=document.querySelector('.mood i')
 let mood;
 if(localStorage.getItem('mood')!=null){
     if(localStorage.getItem('mood')=='dark'){
-        iconTogg.classList.replace('fa-sun','fa-moon')
+        iconTogg.classList.replace('fa-moon','fa-sun')
+        mood='dark';
         document.body.classList.add('dark');
     }else{
-        iconTogg.classList.replace('fa-moon','fa-sun')
+        iconTogg.classList.replace('fa-sun','fa-moon')
+        mood='light';
         document.body.classList.remove('dark');
     }
 }
 modeSpan.addEventListener('click',()=>{
-    if(mood=='dark'){
+    console.log(';llh');
+    if(mood==="dark"){
         iconTogg.classList.replace('fa-sun','fa-moon')
         mood='light';
-        localStorage.setItem('mood','light');
+        localStorage.setItem('mood',mood);
         document.body.classList.remove('dark');
     }else{
         iconTogg.classList.replace('fa-moon','fa-sun')
         mood='dark'
-        localStorage.setItem('mood','dark');
+        localStorage.setItem('mood',mood);
         document.body.classList.add('dark');
     }
 })
@@ -54,17 +57,16 @@ modeSpan.addEventListener('click',()=>{
 
 
 //Progress
-let yearlyBox=document.querySelector('.yearly-box');
+let sectionSkills=document.querySelector('.skills');
 let allspanProg=document.querySelectorAll('.prog span');
-if(document.body.classList.contains('dashboard')){
-    addEventListener('scroll',()=>{
-        if(scrollY>=yearlyBox.offsetTop-350){
-            allspanProg.forEach((span)=>{
-                span.style.width=span.getAttribute('data-prog');
-            })
-        }
-    })
-}
+addEventListener('scroll',()=>{
+    if(scrollY>=sectionSkills.offsetTop-350){
+        allspanProg.forEach((span)=>{
+            span.style.width=span.getAttribute('data-prog');
+        })
+    }
+})
+
 
 //Counter Number
 let ticketBox=document.querySelector('.tickets-box');

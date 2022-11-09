@@ -14,26 +14,8 @@
     <title>Mostafa Hossam Profile</title>
   </head>
   <body>
-    <span class="mood"><i class="fas fa-moon"></i></span>
-    <!-- =========================Header===================== -->
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <span class="fas fa-bars open-sidbar"></span>
-          <form action="">
-            <i class="fas fa-search"></i>
-            <input type="search" name="" id="" placeholder="Search...." />
-          </form>
-          <div class="user">
-            <div class="user-txt">
-              <h3 class="user-name">Mostafa</h3>
-              <p>Frontend</p>
-            </div>
-            <img src="img/myphoto.jpg" alt="" class="img-user" />
-          </div>
-        </div>
-      </div>
-    </header>
+    <span class="mood" id="mood"><i class="fas fa-moon"></i></span>
+    <span class="fas fa-bars open-sidbar"></span>
     <!-- =========================Sidbar===================== -->
     <div class="sidbar">
       <span class="fas fa-times close-sidbar"></span>
@@ -109,43 +91,39 @@
             magnam impedit.
           </p>
         </div>
-        <div class="about-information">
-          <ul class="list">
-            <li>
-              <span class="que">Birthday : </span>
-              <span class="ans">16 Aug 2002</span>
-            </li>
-            <li>
-              <span class="que">Website : </span>
-              <span class="ans">www.domain.com.</span>
-            </li>
-            <li>
-              <span class="que">Degree : </span>
-              <span class="ans">CS Student</span>
-            </li>
-            <li>
-              <span class="que">City : </span>
-              <span class="ans">Mansoura.</span>
-            </li>
-          </ul>
-          <ul class="list">
-            <li>
-              <span class="que">Age : </span>
-              <span class="ans age"></span>
-            </li>
-            <li>
-              <span class="que">Email : </span>
-              <span class="ans">mosthossam123@gmail.com</span>
-            </li>
-            <li>
-              <span class="que">Phone : </span>
-              <span class="ans">+201064564850</span>
-            </li>
-            <li>
-              <span class="que">Freelance : </span>
-              <span class="ans">Availabel</span>
-            </li>
-          </ul>
+        <div class="list">
+          <div class="info-box">
+            <span class="que">Birthday : </span>
+            <span class="ans">16 Aug 2002</span>
+          </div>
+          <div class="info-box">
+            <span class="que">Age : </span>
+            <span class="ans age"></span>
+          </div>
+          <div class="info-box">
+            <span class="que">Website : </span>
+            <span class="ans">www.domain.com.</span>
+          </div>
+          <div class="info-box">
+            <span class="que">Email : </span>
+            <span class="ans">mosthossam123@gmail.com</span>
+          </div>
+          <div class="info-box">
+            <span class="que">Degree : </span>
+            <span class="ans">CS Student</span>
+          </div>
+          <div class="info-box">
+            <span class="que">Phone : </span>
+            <span class="ans">+201064564850</span>
+          </div>
+          <div class="info-box">
+            <span class="que">City : </span>
+            <span class="ans">Mansoura.</span>
+          </div>
+          <div class="info-box">
+            <span class="que">Freelance : </span>
+            <span class="ans">Availabel</span>
+          </div>
         </div>
         <div class="btns-about">
           <a class="btn" href="">download cv</a>
@@ -155,11 +133,97 @@
     </section>
     <!-- =========================Services Section===================== -->
     <section class="services" id="services">
-      <div class="services-content"></div>
+      <h2 class="title-section">Services</h2>
+      <div class="services-content">
+        <div class="serv-item">
+          <span class="fas fa-laptop-code"></span>
+          <h3>Frontend Developer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis voluptate vitae nemo repellat accusantium deserunt
+            reprehenderit ducimus, cupiditate exercitationem ad!
+          </p>
+        </div>
+        <div class="serv-item">
+          <span class="fas fa-palette"></span>
+          <h3>Web Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis voluptate vitae nemo repellat accusantium deserunt
+            reprehenderit ducimus, cupiditate exercitationem ad!
+          </p>
+        </div>
+        <div class="serv-item">
+          <span class="fas fa-code"></span>
+          <h3>Clean Code</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis voluptate vitae nemo repellat accusantium deserunt
+            reprehenderit ducimus, cupiditate exercitationem ad!
+          </p>
+        </div>
+        <div class="serv-item">
+          <span class="fas fa-mobile-alt"></span>
+          <h3>Responsive Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis voluptate vitae nemo repellat accusantium deserunt
+            reprehenderit ducimus, cupiditate exercitationem ad!
+          </p>
+        </div>
+        <div class="serv-item">
+          <span class="fas fa-search"></span>
+          <h3>Web Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis voluptate vitae nemo repellat accusantium deserunt
+            reprehenderit ducimus, cupiditate exercitationem ad!
+          </p>
+        </div>
+        <div class="serv-item">
+          <span class="fas fa-bullhorn"></span>
+          <h3>Web Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis voluptate vitae nemo repellat accusantium deserunt
+            reprehenderit ducimus, cupiditate exercitationem ad!
+          </p>
+        </div>
+      </div>
     </section>
     <!-- =========================skills Section===================== -->
     <section class="skills" id="skills">
-      <div class="skills-content"></div>
+      <h2 class="title-section">My Skills</h2>
+      <div class="skills-content">
+        <div class="box-skill">
+          <h4>HTML</h4>
+          <p class="prog" data-prog="95%"><span data-prog="95%"></span></p>
+        </div>
+        <div class="box-skill">
+          <h4>CSS</h4>
+          <p class="prog" data-prog="90%"><span data-prog="90%"></span></p>
+        </div>
+        <div class="box-skill">
+          <h4>SASS</h4>
+          <p class="prog" data-prog="90%"><span data-prog="90%"></span></p>
+        </div>
+        <div class="box-skill">
+          <h4>BootStrap</h4>
+          <p class="prog" data-prog="85%"><span data-prog="85%"></span></p>
+        </div>
+        <div class="box-skill">
+          <h4>JavaScript</h4>
+          <p class="prog" data-prog="75%"><span data-prog="75%"></span></p>
+        </div>
+        <div class="box-skill">
+          <h4>React</h4>
+          <p class="prog" data-prog="75%"><span data-prog="75%"></span></p>
+        </div>
+        <div class="box-skill">
+          <h4>Git/GitHub</h4>
+          <p class="prog" data-prog="70%"><span data-prog="70%"></span></p>
+        </div>
+      </div>
     </section>
     <!-- =========================Portfolio Section===================== -->
     <section class="portfolio" id="portfolio">

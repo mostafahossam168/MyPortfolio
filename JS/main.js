@@ -1,6 +1,8 @@
 let sidbar=document.querySelector('.sidbar')
 let closeSidbar=document.querySelector('.close-sidbar');
 let openSidar=document.querySelector('.open-sidbar');
+let linkSidbar=document.querySelectorAll('.sidbar ul li a');
+
 //Opensidbar
 openSidar.addEventListener('click',()=>{
     sidbar.classList.add('active');
@@ -12,6 +14,28 @@ closeSidbar.addEventListener('click',()=>{
 //Close Sidbar If Scroll
 addEventListener('scroll',()=>{
     sidbar.classList.remove('active');
+})
+// Click Links sidbar 
+linkSidbar.forEach(link=>{
+    link.addEventListener('click',()=>{
+        linkSidbar.forEach((e)=>e.classList.remove('active'))
+        link.classList.add('active');
+    })
+})
+
+//ADD Class Active A Link iF Scroll Start from same name
+let allSections=Array.from(document.querySelectorAll('section'));
+addEventListener('scroll',()=>{
+    allSections.forEach((section,index)=>{
+        if(window.scrollY>=section.offsetTop-200 && window.scrollY<allSections[index+1].offsetTop-200){
+            linkSidbar.forEach((link)=>{
+                link.classList.remove('active');
+                if(link.getAttribute('data-section')==section.id){
+                    link.classList.add('active');
+                }
+            })
+        }
+    })
 })
 
 //Toggle Mode
@@ -44,10 +68,6 @@ modeSpan.addEventListener('click',()=>{
     }
 })
 
-
-
-
-
 //Progress
 let sectionSkills=document.querySelector('.skills');
 let allspanProg=document.querySelectorAll('.prog span');
@@ -58,6 +78,7 @@ addEventListener('scroll',()=>{
         })
     }
 })
+
 //Add My Age
 let age=document.querySelector('.age');
 let mybirthday=new Date('16 Aug 2002');
@@ -65,22 +86,48 @@ let dateNow=new Date();
 let myage=dateNow.getTime()- mybirthday.getTime();
 age.textContent=Math.floor(myage/1000/365/24/60/60);
 
+// My Projects 
+let portfolioContent=document.querySelector('.portfolio-content');
+fetch('../JS/projects.json').then(res=>res.json()).then((projects)=>{
+    console.log(projects)
+    for(let x=0;x<projects.length;x++){
+        portfolioContent.innerHTML+=`
+            <div class="item all ${projects[x].category}" >
+                <img src="${projects[x].img}" alt="" />
+                <span class="name">${projects[x].name}</span>
+                <div class="links">
+                    <a href="${projects[x].review}" target="_blank"><i class="fas fa-eye"></i></a>
+                    <a href="${projects[x].code}" target="_blank"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+        `
+    }
+})
+
 //Filter My Projects
 let listProjects=document.querySelectorAll('.list-portfolio li');
+let allProjects;
+addEventListener('load',()=>{
+    allProjects=document.querySelectorAll('.portfolio-content .item');
+})
 listProjects.forEach((li)=>{
     li.addEventListener('click',()=>{
         listProjects.forEach((e)=>e.classList.remove('active'));
         li.classList.add('active');
+        allProjects.forEach((e)=>{
+            if(e.classList.contains(`${li.getAttribute('data-name')}`)){
+                e.classList.remove('active');
+                e.classList.remove('hidden');
+                setTimeout(()=>{
+                    e.classList.add('active');
+                },.1)
+            }else{
+                e.classList.add('hidden')
+                e.classList.remove('active');
+            }
+        })
     })
 })
-
-
-
-
-
-
-
-
 
 //Button Up
 let upBtn=document.querySelector('.btn-up');

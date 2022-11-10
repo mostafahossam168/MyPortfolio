@@ -88,7 +88,7 @@ age.textContent=Math.floor(myage/1000/365/24/60/60);
 
 // My Projects 
 let portfolioContent=document.querySelector('.portfolio-content');
-fetch('../JS/projects.json').then(res=>res.json()).then((projects)=>{
+fetch('./projects.json').then(res=>res.json()).then((projects)=>{
     console.log(projects)
     for(let x=0;x<projects.length;x++){
         portfolioContent.innerHTML+=`

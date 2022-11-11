@@ -81,6 +81,7 @@ age.textContent=Math.floor(myage/1000/365/24/60/60);
 
 // My Projects 
 let portfolioContent=document.querySelector('.portfolio-content');
+let allProjects;
 fetch('JS/projects.json').then(res=>res.json()).then((projects)=>{
     console.log(projects)
     for(let x=0;x<projects.length;x++){
@@ -95,31 +96,30 @@ fetch('JS/projects.json').then(res=>res.json()).then((projects)=>{
             </div>
         `
     }
+    allProjects=document.querySelectorAll('.portfolio-content .item');
 })
 
 //Filter My Projects
 let listProjects=document.querySelectorAll('.list-portfolio li');
-let allProjects;
 addEventListener('load',()=>{
-    allProjects=document.querySelectorAll('.portfolio-content .item');
-    listProjects.forEach((li)=>{
-        li.addEventListener('click',()=>{
-            console.log(li);
-            listProjects.forEach((e)=>e.classList.remove('active'));
-            li.classList.add('active');
-            console.log(allProjects);
-            allProjects.forEach((e)=>{
-                if(e.classList.contains(`${li.getAttribute('data-name')}`)){
-                    e.classList.remove('active');
-                    e.classList.remove('hidden');
-                    setTimeout(()=>{
-                        e.classList.add('active');
-                    },.1)
-                }else{
-                    e.classList.add('hidden')
-                    e.classList.remove('active');
-                }
-            })
+})
+listProjects.forEach((li)=>{
+    li.addEventListener('click',()=>{
+        console.log(li);
+        listProjects.forEach((e)=>e.classList.remove('active'));
+        li.classList.add('active');
+        console.log(allProjects);
+        allProjects.forEach((e)=>{
+            if(e.classList.contains(`${li.getAttribute('data-name')}`)){
+                e.classList.remove('active');
+                e.classList.remove('hidden');
+                setTimeout(()=>{
+                    e.classList.add('active');
+                },.1)
+            }else{
+                e.classList.add('hidden')
+                e.classList.remove('active');
+            }
         })
     })
 })

@@ -1,7 +1,6 @@
 let sidbar=document.querySelector('.sidbar')
 let closeSidbar=document.querySelector('.close-sidbar');
 let openSidar=document.querySelector('.open-sidbar');
-let linkSidbar=document.querySelectorAll('.sidbar ul li a');
 
 //Opensidbar
 openSidar.addEventListener('click',()=>{
@@ -15,16 +14,11 @@ closeSidbar.addEventListener('click',()=>{
 addEventListener('scroll',()=>{
     sidbar.classList.remove('active');
 })
-// Click Links sidbar 
-linkSidbar.forEach(link=>{
-    link.addEventListener('click',()=>{
-        linkSidbar.forEach((e)=>e.classList.remove('active'))
-        link.classList.add('active');
-    })
-})
+
 
 //ADD Class Active A Link iF Scroll Start from same name
 let allSections=Array.from(document.querySelectorAll('section'));
+let linkSidbar=document.querySelectorAll('.sidbar ul li a');
 addEventListener('scroll',()=>{
     allSections.forEach((section,index)=>{
         if(window.scrollY>=section.offsetTop-200 && window.scrollY<allSections[index+1].offsetTop-200){
@@ -54,7 +48,6 @@ if(localStorage.getItem('mood')!=null){
     }
 }
 modeSpan.addEventListener('click',()=>{
-    console.log(';llh');
     if(mood==="dark"){
         iconTogg.classList.replace('fa-sun','fa-moon')
         mood='light';
@@ -109,22 +102,23 @@ let listProjects=document.querySelectorAll('.list-portfolio li');
 let allProjects;
 addEventListener('load',()=>{
     allProjects=document.querySelectorAll('.portfolio-content .item');
-})
-listProjects.forEach((li)=>{
-    li.addEventListener('click',()=>{
-        listProjects.forEach((e)=>e.classList.remove('active'));
-        li.classList.add('active');
-        allProjects.forEach((e)=>{
-            if(e.classList.contains(`${li.getAttribute('data-name')}`)){
-                e.classList.remove('active');
-                e.classList.remove('hidden');
-                setTimeout(()=>{
-                    e.classList.add('active');
-                },.1)
-            }else{
-                e.classList.add('hidden')
-                e.classList.remove('active');
-            }
+    listProjects.forEach((li)=>{
+        li.addEventListener('click',()=>{
+            console.log(li);
+            listProjects.forEach((e)=>e.classList.remove('active'));
+            li.classList.add('active');
+            allProjects.forEach((e)=>{
+                if(e.classList.contains(`${li.getAttribute('data-name')}`)){
+                    e.classList.remove('active');
+                    e.classList.remove('hidden');
+                    setTimeout(()=>{
+                        e.classList.add('active');
+                    },.1)
+                }else{
+                    e.classList.add('hidden')
+                    e.classList.remove('active');
+                }
+            })
         })
     })
 })

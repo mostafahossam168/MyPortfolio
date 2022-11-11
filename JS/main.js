@@ -107,6 +107,7 @@ addEventListener('load',()=>{
             console.log(li);
             listProjects.forEach((e)=>e.classList.remove('active'));
             li.classList.add('active');
+            console.log(allProjects);
             allProjects.forEach((e)=>{
                 if(e.classList.contains(`${li.getAttribute('data-name')}`)){
                     e.classList.remove('active');

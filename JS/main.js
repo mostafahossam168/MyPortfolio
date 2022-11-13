@@ -98,6 +98,7 @@ fetch('JS/projects.json').then(res=>res.json()).then((projects)=>{
     allProjects=document.querySelectorAll('.portfolio-content .item');
 })
 
+
 //Filter My Projects
 let listProjects=document.querySelectorAll('.list-portfolio li');
 listProjects.forEach((li)=>{

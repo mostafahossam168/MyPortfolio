@@ -83,7 +83,6 @@ age.textContent=Math.floor(myage/1000/365/24/60/60);
 let portfolioContent=document.querySelector('.portfolio-content');
 let allProjects;
 fetch('JS/projects.json').then(res=>res.json()).then((projects)=>{
-    console.log(projects)
     for(let x=0;x<projects.length;x++){
         portfolioContent.innerHTML+=`
             <div class="item all ${projects[x].category}" >
@@ -101,14 +100,10 @@ fetch('JS/projects.json').then(res=>res.json()).then((projects)=>{
 
 //Filter My Projects
 let listProjects=document.querySelectorAll('.list-portfolio li');
-addEventListener('load',()=>{
-})
 listProjects.forEach((li)=>{
     li.addEventListener('click',()=>{
-        console.log(li);
         listProjects.forEach((e)=>e.classList.remove('active'));
         li.classList.add('active');
-        console.log(allProjects);
         allProjects.forEach((e)=>{
             if(e.classList.contains(`${li.getAttribute('data-name')}`)){
                 e.classList.remove('active');

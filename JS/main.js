@@ -67,7 +67,7 @@ let allspanProg=document.querySelectorAll('.prog span');
 addEventListener('scroll',()=>{
     if(scrollY>=sectionSkills.offsetTop-350){
         allspanProg.forEach((span)=>{
-            span.style.width=span.getAttribute('data-prog');
+            span.style.width='100%';
         })
     }
 })

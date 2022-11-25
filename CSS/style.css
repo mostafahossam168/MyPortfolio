@@ -20,7 +20,7 @@ html {
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
-  --main-color: #9c27b0;
+  --main-color: #149ddd;
   --transtion: 0.4s;
 }
 body.dark {
@@ -65,6 +65,7 @@ section {
 .open-sidbar:hover,
 .mood:hover {
   background-color: var(--main-color);
+  color: #fff;
 }
 .mood {
   top: 100px;
@@ -88,7 +89,7 @@ section {
   transition: var(--transtion);
 }
 .btn {
-  padding: 10px 15px;
+  padding: 7px 15px;
 }
 .btn-up {
   position: fixed;
@@ -126,7 +127,7 @@ section {
   cursor: pointer;
 }
 .sidbar .logo {
-  padding: 12px 10px;
+  padding: 12px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,7 +358,7 @@ ul li a i {
 .about .about-content .list .info-box {
   width: 47%;
   border-bottom: 1px solid var(--text-black-700);
-  padding: 15px 0;
+  padding: 10px 0;
 }
 .about .about-content .list .info-box span {
   font-size: 15px;
@@ -400,26 +401,27 @@ ul li a i {
   border: 1px solid var(--bg-black-50);
   border-radius: 10px;
 }
-.services-content .serv-item span {
+.services-content .serv-item i {
   color: var(--main-color);
-  font-size: 45px;
+  font-size: 35px;
   padding: 10px;
 }
 .services-content .serv-item h3 {
   font-size: 20px;
+  font-weight: 600;
   padding: 5px;
   color: var(--text-black-900);
 }
-.services-content .serv-item p {
+.services-content .serv-item span {
   color: var(--text-black-700);
-  font-size: 16px;
+  font-size: 15px;
 }
 @media (max-width: 768px) {
   .services-content {
     padding: 0px;
   }
-  .services-content .serv-item span {
-    font-size: 35px;
+  .services-content .serv-item i {
+    font-size: 30px;
   }
   .services-content .serv-item h3 {
     font-size: 18px;
@@ -437,24 +439,17 @@ ul li a i {
   width: 47%;
 }
 .skills .skills-content .box-skill h4 {
-  font-weight: 600;
-  margin: 10px 0;
+  font-weight: 500;
+  margin: 10px 0 5px;
   font-size: 17px;
   color: var(--text-black-900);
 }
 .skills .skills-content .box-skill .prog {
   width: 100%;
-  height: 10px;
+  height: 8px;
   position: relative;
   background-color: var(--bg-black-50);
   border-radius: 10px;
-}
-.skills .skills-content .box-skill .prog::before {
-  content: attr(data-prog);
-  position: absolute;
-  right: 0;
-  top: -32px;
-  color: var(--text-black-900);
 }
 .skills .skills-content .box-skill .prog span {
   display: block;
@@ -484,7 +479,7 @@ ul li a i {
   gap: 10px;
 }
 .portfolio .list-portfolio li {
-  padding: 8px 20px;
+  padding: 7px 20px;
   border-radius: 20px;
   color: var(--text-black-900);
   cursor: pointer;
@@ -544,7 +539,7 @@ ul li a i {
   transform: translate(-50%, -50%);
   background-color: var(--main-color);
   color: #fff;
-  padding: 5px;
+  padding: 7px 10px;
   transition: var(--transtion);
   border-radius: 10px;
 }
@@ -566,7 +561,7 @@ ul li a i {
   width: 50%;
   display: block;
   padding: 7px;
-  background-color: #9c27b0a3;
+  background-color: #37b3ed;
   color: #fff;
   text-align: center;
   transition: var(--transtion);
@@ -601,8 +596,11 @@ ul li a i {
   gap: 20px;
 }
 .contact .contact-content .info-contact .inf-box {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
 }
 .contact .contact-content .info-contact .inf-box i {
   font-size: 30px;
@@ -647,6 +645,9 @@ ul li a i {
 .contact .contact-content .form-contact textarea {
   height: 200px;
   resize: none;
+}
+.contact .contact-content .form-contact button {
+  padding: 8px 10px;
 }
 @media (max-width: 768px) {
   .contact .contact-content .form-contact {

@@ -14,11 +14,25 @@
         "code":"https://github.com/Mostafa1682002/Woodex"
     },
     {
+        "name":"CURDS",
+        "img":"img/CURDS.png",
+        "category":"javascript",
+        "review":"https://mostafa1682002.github.io/Curds-Systems-/",
+        "code":"https://github.com/Mostafa1682002/Curds-Systems-"
+    },
+    {
         "name":"HexaShop",
         "img":"img/HexaShop.png",
         "category":"design",
         "review":"https://mostafa1682002.github.io/HexaShop-Ecommerce/",
         "code":"https://github.com/Mostafa1682002/HexaShop-Ecommerce"
+    },
+    {
+        "name":"Templet Three",
+        "img":"img/Templet Three.png",
+        "category":"design",
+        "review":"https://mostafa1682002.github.io/Templete-Three-Mostafa/",
+        "code":"https://github.com/Mostafa1682002/Templete-Three-Mostafa"
     },
     {
         "name":"Online Education",
@@ -28,6 +42,13 @@
         "code":"https://github.com/Mostafa1682002/Online-Education-Website."
     },
     {
+        "name":"Fetch GitHub",
+        "img":"img/FetchGitHub.png",
+        "category":"javascript",
+        "review":"https://mostafa1682002.github.io/GitHub-Repos",
+        "code":"https://github.com/Mostafa1682002/GitHub-Repos"
+    },
+    {
         "name":"Ecommerce",
         "img":"img/Ecommerce.png",
         "category":"design",
@@ -35,10 +56,24 @@
         "code":"https://github.com/Mostafa1682002/e-shopper"
     },
     {
-        "name":"Fetch GitHub",
-        "img":"img/FetchGitHub.png",
+        "name":"Grocery",
+        "img":"img/Grocery.png",
+        "category":"design",
+        "review":"https://mostafa1682002.github.io/Grocery-Store/",
+        "code":"https://github.com/Mostafa1682002/Grocery-Store"
+    },
+    {
+        "name":"Weather",
+        "img":"img/Weather.png",
         "category":"javascript",
-        "review":"https://mostafa1682002.github.io/GitHub-Repos",
-        "code":"https://github.com/Mostafa1682002/GitHub-Repos"
+        "review":"https://mostafa1682002.github.io/Weather-App/",
+        "code":"https://github.com/Mostafa1682002/Weather-App"
+    },
+    {
+        "name":"Coffe Shop",
+        "img":"img/Coffe-Shop.png",
+        "category":"design",
+        "review":"https://mostafa1682002.github.io/Coffee-Shop-WebSite/",
+        "code":"https://github.com/Mostafa1682002/Coffee-Shop-WebSite"
     }
 ]

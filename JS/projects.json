@@ -56,8 +56,15 @@
         "code":"https://github.com/Mostafa1682002/e-shopper"
     },
     {
+        "name":"Quiz App",
+        "img":"img/CURDS.png",
+        "category":"javascript",
+        "review":"https://mostafa1682002.github.io/Quiz-App/",
+        "code":"https://github.com/Mostafa1682002/Quiz-App/"
+    },
+    {
         "name":"Grocery",
-        "img":"img/Grocery.png",
+        "img":"img/Quiz App.png",
         "category":"design",
         "review":"https://mostafa1682002.github.io/Grocery-Store/",
         "code":"https://github.com/Mostafa1682002/Grocery-Store"
@@ -75,5 +82,19 @@
         "category":"design",
         "review":"https://mostafa1682002.github.io/Coffee-Shop-WebSite/",
         "code":"https://github.com/Mostafa1682002/Coffee-Shop-WebSite"
+    },
+    {
+        "name":"To-Do-List",
+        "img":"img/ToDoList.png",
+        "category":"javascript",
+        "review":"https://mostafa1682002.github.io/To_Do_List/",
+        "code":"https://github.com/Mostafa1682002/To_Do_List"
+    },
+    {
+        "name":"Kitter",
+        "img":"img/Kitter.png",
+        "category":"design",
+        "review":"https://mostafa1682002.github.io/Kitter/",
+        "code":"https://github.com/Mostafa1682002/Kitter"
     }
 ]

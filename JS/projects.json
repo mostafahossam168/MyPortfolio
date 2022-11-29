@@ -29,7 +29,7 @@
     },
     {
         "name":"Templet Three",
-        "img":"img/Templet Three.png",
+        "img":"img/TempletThree.png",
         "category":"design",
         "review":"https://mostafa1682002.github.io/Templete-Three-Mostafa/",
         "code":"https://github.com/Mostafa1682002/Templete-Three-Mostafa"
@@ -57,7 +57,7 @@
     },
     {
         "name":"Quiz App",
-        "img":"img/Quiz App.png",
+        "img":"img/QuizApp.png",
         "category":"javascript",
         "review":"https://mostafa1682002.github.io/Quiz-App/",
         "code":"https://github.com/Mostafa1682002/Quiz-App/"
@@ -96,5 +96,12 @@
         "category":"design",
         "review":"https://mostafa1682002.github.io/Kitter/",
         "code":"https://github.com/Mostafa1682002/Kitter"
+    },
+    {
+        "name":"Memory Game",
+        "img":"img/MemoryGame.png",
+        "category":"javascript",
+        "review":"https://mostafa1682002.github.io/Memory_Game/",
+        "code":"https://github.com/Mostafa1682002/Memory_Game"
     }
 ]

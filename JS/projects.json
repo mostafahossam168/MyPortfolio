@@ -117,5 +117,54 @@
         "category":"laravel",
         "review":"https://cashir-27.const-tech.in/",
         "code":"https://github.com/mostafahossam168/cashir26"
+    },
+    {
+        "name":"Stp",
+        "img":"img/stp.jpeg",
+        "category":"laravel",
+        "review":"https://stp-academy.com/",
+        "code":"https://stp-academy.com/"
+    },
+    {
+        "name":"Scholigo",
+        "img":"img/scholigo.jpeg",
+        "category":"laravel",
+        "review":"https://scholigo.anmka.com/",
+        "code":"https://scholigo.anmka.com/"
+    },
+    {
+        "name":"Vip",
+        "img":"img/vip.jpeg",
+        "category":"laravel",
+        "review":"https://vip-erp.anmka.com/dashboard",
+        "code":"https://vip-erp.anmka.com/dashboard"
+    },
+    {
+        "name":"Ecommerce",
+        "img":"img/ecommerce.jpeg",
+        "category":"laravel",
+        "review":"https://github.com/mostafahossam168/e-commerce-livewire",
+        "code":"https://github.com/mostafahossam168/e-commerce-livewire"
+    },
+    {
+        "name":"Meaad",
+        "img":"img/meaad.jpeg",
+        "category":"laravel",
+        "review":"https://me3ad.const-tech.in/",
+        "code":"https://github.com/mostafahossam168/me3ad"
+    },
+    {
+        "name":"Fahem",
+        "img":"img/fahem.jpeg",
+        "category":"laravel",
+        "review":"https://github.com/mostafahossam168/Fahem",
+        "code":"https://github.com/mostafahossam168/Fahem"
+    },
+    {
+        "name":"Bank Eldam",
+        "img":"img/BankElDam.png",
+        "category":"laravel",
+        "review":"https://github.com/mostafahossam168/Blood-bank-laravel",
+        "code":"https://github.com/mostafahossam168/Blood-bank-laravel"
     }
 ]

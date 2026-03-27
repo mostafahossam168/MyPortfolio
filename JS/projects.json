@@ -166,5 +166,12 @@
         "category":"laravel",
         "review":"https://github.com/mostafahossam168/Blood-bank-laravel",
         "code":"https://github.com/mostafahossam168/Blood-bank-laravel"
-    }
+    },
+    {
+        "name":"Hr",
+        "img":"img/hr.jpeg",
+        "category":"laravel",
+        "review":"https://hr2.const-tech.in/ar/admin/login",
+        "code":"https://github.com/mostafahossam168/Hr"
+    }   
 ]

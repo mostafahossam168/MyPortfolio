@@ -173,5 +173,12 @@
         "category":"laravel",
         "review":"https://hr2.const-tech.in/ar/admin/login",
         "code":"https://github.com/mostafahossam168/Hr"
+    }, 
+    {
+        "name":"Al Mutamyizun",
+        "img":"img/almuta.png",
+        "category":"laravel",
+        "review":"https://almutamayizun.anmka.com/",
+        "code":"https://almutamayizun.anmka.com/"
     }   
 ]

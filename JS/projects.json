@@ -123,7 +123,7 @@
         "img":"img/stp.jpeg",
         "category":"laravel",
         "review":"https://stp-academy.com/",
-        "code":"https://stp-academy.com/"
+        "code":"https://github.com/mostafahossam168/STP"
     },
     {
         "name":"Scholigo",
@@ -179,6 +179,6 @@
         "img":"img/almuta.png",
         "category":"laravel",
         "review":"https://almutamayizun.anmka.com/",
-        "code":"https://almutamayizun.anmka.com/"
+        "code":"https://github.com/mostafahossam168/almutamayizun"
     }   
 ]

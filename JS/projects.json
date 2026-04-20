@@ -126,13 +126,6 @@
         "code":"https://github.com/mostafahossam168/STP"
     },
     {
-        "name":"Scholigo",
-        "img":"img/scholigo.jpeg",
-        "category":"laravel",
-        "review":"https://scholigo.anmka.com/",
-        "code":"https://scholigo.anmka.com/"
-    },
-    {
         "name":"Vip",
         "img":"img/vip.jpeg",
         "category":"laravel",

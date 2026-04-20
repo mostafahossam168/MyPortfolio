@@ -132,3 +132,14 @@ addEventListener('scroll',()=>{
 upBtn.addEventListener('click',()=>{
     window.scrollTo(0,0)
 })
+
+
+
+
+    // {
+    //     "name":"Scholigo",
+    //     "img":"img/scholigo.jpeg",
+    //     "category":"laravel",
+    //     "review":"https://scholigo.anmka.com/",
+    //     "code":"https://scholigo.anmka.com/"
+    // },
